@@ -4,6 +4,9 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "scripts": {
+    "start:server": "cd backend && nodemon server.js --exec babel-node --presets es2015,stage-0",
+    "start:frontend": "cd frontend && npm start",
+    "start:dev": "concurrently \"npm start:server\" \"npm start:frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
