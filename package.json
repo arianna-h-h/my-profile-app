@@ -1,17 +1,19 @@
 {
   "name": "my-profile-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "heroku": "^7.11.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
-  },
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arianna-h-h/my-profile-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arianna-h-h/my-profile-app/issues"
+  },
+  "homepage": "https://github.com/arianna-h-h/my-profile-app#readme"
 }
