@@ -27,9 +27,9 @@
 }
 
 .top-menu {
+  align-content: flex-end;
   display: flex;
   flex-direction: row;
-  align-content: flex-end;
   padding: 100px 50px 0 100px;
 }
 

@@ -7,11 +7,17 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const User = require('./userModel');
 
-const API_PORT = process.env.API_PORT || 3000;
+const API_PORT = process.env.API_PORT || 8080;
 
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
