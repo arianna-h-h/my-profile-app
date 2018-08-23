@@ -9,9 +9,13 @@
 
 .App-header {
   background-color: #222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 150px;
   padding: 20px;
   color: white;
+  width: 100%;
 }
 
 .App-title {
@@ -22,7 +26,13 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.top-menu {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  padding: 100px 50px 0 100px;
+}
+
+.menu-item {
+  margin: 20px;
 }
