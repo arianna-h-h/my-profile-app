@@ -17,7 +17,10 @@
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-jest": "^21.18.0",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-react": "^7.11.1"
   },
   "repository": {
     "type": "git",
@@ -28,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/arianna-h-h/my-profile-app/issues"
   },
-  "homepage": "https://github.com/arianna-h-h/my-profile-app#readme"
+  "homepage": "https://github.com/arianna-h-h/my-profile-app#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0"
+  }
 }
