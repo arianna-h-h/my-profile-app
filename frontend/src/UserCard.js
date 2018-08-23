@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 
-import { ProfileInfo } from './ProfileInfo';
+import ProfileInfoContainer from './ProfileInfoContainer';
 import DescriptionBoxContainer from './DescriptionBoxContainer';
-import { ProfileImage } from './ProfileImage';
+import ProfileImageContainer from './ProfileImageContainer';
 
 class UserCard extends Component {
   render () {
     const { firstName, lastName, image, description } = this.props.user;
     const { id } = this.props;
     return (
-      <div>
-        <ProfileInfo firstName={firstName} lastName={lastName} />
+      <div className='user-card'>
+        <ProfileInfoContainer className='user-card' firstName={firstName} lastName={lastName} />
         <DescriptionBoxContainer description={description} id={id} />
-        <ProfileImage image={image} />
+        <ProfileImageContainer image={image} />
       </div>
     );
   }

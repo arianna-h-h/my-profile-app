@@ -24,6 +24,7 @@
 
 .App-intro {
   font-size: large;
+  margin-top: 100px;
 }
 
 .top-menu {
@@ -35,4 +36,24 @@
 
 .menu-item {
   margin: 20px;
+}
+
+.user-card {
+  border-color: grey;
+  border-radius: 10px;
+  border-style: solid;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 20px;
+}
+
+.name {
+  display: inline-flex;
+}
+
+input[type=text] {
+  border: none;
+  color: black;
+  margin: 5px;
 }

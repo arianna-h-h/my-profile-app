@@ -58,7 +58,7 @@ class NewUserBox extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <input type='submit' value='Submit' />
+        <input type='submit' value='+' />
       </form>
     );
   }

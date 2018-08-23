@@ -9,8 +9,6 @@ const mapStateToProps = ({ users, loaded }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   loadUsers: () => dispatch(loadUsers())
-  // findClosest: (zip, responses) => dispatch(findClosest(zip, responses)),
-  // showAllDogs: () => dispatch(showAllDogs())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserList);
