@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
+import NewUserBoxContainer from './NewUserBoxContainer';
 import UserCard from './UserCard';
-// import axios from 'axios';
-//
-// const API = 'http://localhost:8080/api/';
 
 class UserList extends Component {
   constructor (props) {
@@ -17,12 +15,15 @@ class UserList extends Component {
   render () {
     const { users, loaded } = this.props;
     if (loaded && users && users.length > 0) {
-      return users.map((user) => {
-        return <UserCard key={user._id} user={user} />
-      })
-      // users.forEach(user =>
-      //
-      // )
+      const userCards = users.map((user) => (
+        <UserCard key={user._id} id={user._id} user={user} />
+      ));
+      return (
+        <div>
+          <NewUserBoxContainer />
+          {userCards}
+        </div>
+      );
     } else {
       return <div>'no data'</div>;
     }

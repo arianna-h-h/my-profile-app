@@ -15,6 +15,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'PATCH');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
@@ -49,7 +50,7 @@ router.post('/user', (req, res) => {
   user.image = image;
   user.save(err => {
     if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true });
+    return res.json({ success: true, data: user });
   });
 });
 
@@ -84,7 +85,7 @@ router.patch('/user/:id', (req, res) => {
     if (image) user.image = image;
     user.save(err => {
       if (err) return res.json({ success: false, error: err });
-      return res.json({ success: true });
+      return res.json({ success: true, data: user });
     });
   });
 });

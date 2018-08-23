@@ -1,8 +1,7 @@
 import {
   LOAD_USERS,
-  FETCH_USER,
-  UPDATE_USER,
-  GET_USER
+  CREATE_USER,
+  UPDATE_USER
 } from './constants';
 
 const initialState = {
@@ -17,20 +16,21 @@ export const reducer = (state = initialState, action) => {
         users: action.users,
         loaded: true
       };
-    case FETCH_USER:
+    case CREATE_USER:
+      const addedUsers = { ...state.users.concat(action.user) };
+      console.log(addedUsers)
       return {
         ...state,
-        users: action.users
+        users: addedUsers,
+        loaded: true
       };
+
     case UPDATE_USER:
+      const newUsers = { ...state.users[action.user.id] = action.user };
       return {
         ...state,
-        users: action.users
-      };
-    case GET_USER:
-      return {
-        ...state,
-        users: action.users
+        users: newUsers,
+        loaded: true
       };
     default:
       return state;

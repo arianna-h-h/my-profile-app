@@ -973,7 +973,7 @@ Files on the left have more priority than files on the right:
 * `npm test`: `.env.test.local`, `.env.test`, `.env` (note `.env.local` is missing)
 
 These variables will act as the defaults if the machine does not explicitly set them.<br>
-Please refer to the [dotenv documentation](https://github.com/motdotla/dotenv) for more details.
+Please refer to the [dotenv documentation](https://github.com/motdotla/dotenv) for more description.
 
 >Note: If you are defining environment variables for development, your CI and/or hosting platform will most likely need
 these defined as well. Consult their documentation how to do this. For example, see the documentation for [Travis CI](https://docs.travis-ci.com/user/environment-variables/) or [Heroku](https://devcenter.heroku.com/articles/config-vars).
@@ -1873,7 +1873,7 @@ option in the `SWPrecacheWebpackPlugin` section of
 
 The default configuration includes a web app manifest located at
 [`public/manifest.json`](public/manifest.json), that you can customize with
-details specific to your web application.
+description specific to your web application.
 
 When a user adds a web app to their homescreen using Chrome or Firefox on
 Android, the metadata in [`manifest.json`](public/manifest.json) determines what
@@ -2305,7 +2305,7 @@ Now offers a zero-configuration single-command deployment. You can use `now` to 
 
     Paste that URL into your browser when the build is complete, and you will see your deployed app.
 
-Details are available in [this article.](https://zeit.co/blog/unlimited-static)
+Description are available in [this article.](https://zeit.co/blog/unlimited-static)
 
 ### [S3](https://aws.amazon.com/s3) and [CloudFront](https://aws.amazon.com/cloudfront/)
 

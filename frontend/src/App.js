@@ -10,7 +10,6 @@ class App extends Component {
         <Header />
         <div className='App-intro'>
           <UserListContainer />
-          {/* <ProfileCard /> */}
         </div>
       </div>
     );
