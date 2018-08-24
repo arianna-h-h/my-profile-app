@@ -3,9 +3,10 @@ import {
   UPDATE_USER,
   CREATE_USER
 } from './constants';
+
 import axios from 'axios';
 
-const API = 'http://localhost:8080/api';
+const API = '/api';
 
 export function receiveUsers (users) {
   return {

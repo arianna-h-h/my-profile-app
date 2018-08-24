@@ -6,12 +6,16 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const User = require('./userModel');
-
+const path = require("path")
 const API_PORT = process.env.PORT || 8080;
 
+console.log(process.env.MONGODB_URI)
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -25,8 +29,6 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 
 app.use('/api', router);
-
-app.listen(API_PORT, () => console.log(`Listening on port ${API_PORT}`));
 
 router.get('/', (req, res) => {
   User.find((err, users) => {
@@ -89,3 +91,9 @@ router.patch('/user/:id', (req, res) => {
     });
   });
 });
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+app.listen(API_PORT, () => console.log(`Listening on port ${API_PORT}`));

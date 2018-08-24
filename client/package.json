@@ -1,11 +1,13 @@
 {
-  "name": "react-ui",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "heroku": "^7.11.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "axios": "^0.18.0",
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
@@ -20,7 +22,6 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^3.1.0",
-    "riek": "^1.1.0",
     "standard": "^11.0.1"
   },
   "scripts": {
