@@ -1,8 +1,9 @@
 import ProfileImage from './ProfileImage';
 import { connect } from 'react-redux';
-import { updateUser } from './actions';
+import { updateUser, loadUsers } from './actions';
 
 const mapDispatchToProps = (dispatch) => ({
+  loadUsers: () => dispatch(loadUsers()),
   updateUser: (id, newData) => dispatch(updateUser(id, newData))
 });
 

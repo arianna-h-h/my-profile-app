@@ -20,7 +20,7 @@ class UserList extends Component {
       ));
       return (
         <div>
-          <div className='user-card'><NewUserBoxContainer /> </div>
+          <div className='new-user-card'><NewUserBoxContainer /> </div>
           {userCards}
         </div>
       );

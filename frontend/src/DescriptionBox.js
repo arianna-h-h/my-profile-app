@@ -15,12 +15,18 @@ class DescriptionBox extends Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    this.props.updateUser(this.props.id, { 'description': this.state.value });
+    const { updateUser, id, loadUsers } = this.props;
+    const { value } = this.state;
+    updateUser(id, { 'description': value })
+      .then(() => loadUsers());
   }
 
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
+        {this.state.value === ''
+          ? <i className='fas fa-pencil-alt fa-xs' />
+          : <button><i className='fas fa-check' /> </button>}
         <label>
           <input type='text'
             placeholder={this.props.description}
@@ -28,7 +34,6 @@ class DescriptionBox extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <input type='submit' value='+' />
       </form>
     );
   }

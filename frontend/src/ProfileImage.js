@@ -15,23 +15,36 @@ class ProfileInfo extends Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    this.props.updateUser(this.props.id, { 'image': this.state.value });
+    const { updateUser, id, loadUsers } = this.props;
+    const { value } = this.state;
+    updateUser(id, { 'image': value })
+      .then(() => loadUsers());
   }
 
   render () {
+    const { image } = this.props;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          <input
-            type='text'
-            name='image'
-            placeholder={this.props.image}
-            value={this.state.image}
-            onChange={this.handleChange}
-          />
-        </label>
-        <input type='submit' value='+' />
-      </form>
+      <div>
+        <img
+          className='profile-picture'
+          src={image}
+          alt='Profile Picture'
+        />
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <input
+              type='text'
+              name='image'
+              placeholder=''
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+          </label>
+          {this.state.value === ''
+            ? <i className='fas fa-pencil-alt fa-xs fa-xs' />
+            : <button><i className='fas fa-check' /> </button>}
+        </form>
+      </div>
     );
   }
 }

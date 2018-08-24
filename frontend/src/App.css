@@ -44,16 +44,54 @@
   border-style: solid;
   display: flex;
   flex-wrap: wrap;
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
   margin: 20px;
   padding: 20px;
 }
 
-.name {
-  display: inline-flex;
+.user-card input[type=text] {
+  border: none;
+  height: 20px;
+  margin: 5px;
+  width: 200px;
 }
 
-input[type=text] {
-  border: none;
+.user-card input:hover {
+  border-style: inset;
+}
+
+::placeholder {
   color: black;
+  font-weight: bold;
+}
+
+.user-card ::placeholder {
+  font-size: 18px;
+}
+
+.profile-picture {
+  height: 200px;
+}
+
+.new-user-card input[type=text] {
   margin: 5px;
+}
+
+.new-user-card {
+  border-color: grey;
+  border-radius: 10px;
+  border-style: solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
 }

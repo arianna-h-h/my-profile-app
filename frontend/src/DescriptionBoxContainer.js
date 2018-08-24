@@ -1,9 +1,9 @@
 import DescriptionBox from './DescriptionBox';
 import { connect } from 'react-redux';
-import { updateUser } from './actions';
+import { updateUser, loadUsers } from './actions';
 
 const mapDispatchToProps = (dispatch) => ({
-  // fetchUser: (id) => dispatch(fetchUser(id)),
+  loadUsers: () => dispatch(loadUsers()),
   updateUser: (id, newData) => dispatch(updateUser(id, newData))
 });
 

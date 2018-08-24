@@ -10,9 +10,11 @@ class UserCard extends Component {
     const { id } = this.props;
     return (
       <div className='user-card'>
-        <ProfileInfoContainer className='user-card' firstName={firstName} lastName={lastName} />
-        <DescriptionBoxContainer description={description} id={id} />
-        <ProfileImageContainer image={image} />
+        <ProfileImageContainer image={image} id={id} />
+        <div className='profile-info'>
+          <ProfileInfoContainer firstName={firstName} lastName={lastName} id={id} />
+          <DescriptionBoxContainer description={description} id={id} />
+        </div>
       </div>
     );
   }
