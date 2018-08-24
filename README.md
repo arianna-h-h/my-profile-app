@@ -1,4 +1,4 @@
-[View demo on Heroku](https://peaceful-dusk-77017.herokuapp.com/)
+[View demo on Heroku](https://arianna-profile-app.herokuapp.com/)
 
 ### Purpose
 The purpose of this app is to fulfill the following requirements with a MERN app deployed on Heroku: 
