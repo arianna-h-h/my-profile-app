@@ -1,6 +1,6 @@
-import UserList from './UserList';
+import UserList from '../components/UserList';
 import { connect } from 'react-redux';
-import { loadUsers } from './actions';
+import { loadUsers } from '../actions';
 
 const mapStateToProps = ({ users, loaded }) => ({
   users,

@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import NewUserBoxContainer from './NewUserBoxContainer';
+import NewUserBoxContainer from '../containers/NewUserBoxContainer';
 import UserCard from './UserCard';
 
 class UserList extends Component {
-  constructor (props) {
-    super(props);
-    this.state = { users: [], loaded: false };
-  }
-
   componentDidMount () {
     this.props.loadUsers();
   }
@@ -25,7 +20,7 @@ class UserList extends Component {
         </div>
       );
     } else {
-      return <div>'no data'</div>;
+      return <div>Loading...</div>;
     }
   };
 }

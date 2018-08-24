@@ -5,7 +5,8 @@ import {
 } from './constants';
 
 const initialState = {
-  users: []
+  users: [],
+  loaded: false
 };
 
 export const reducer = (state = initialState, action) => {
@@ -18,7 +19,6 @@ export const reducer = (state = initialState, action) => {
       };
     case CREATE_USER:
       const addedUsers = { ...state.users.concat(action.user) };
-      console.log(addedUsers)
       return {
         ...state,
         users: addedUsers,

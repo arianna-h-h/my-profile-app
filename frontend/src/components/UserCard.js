@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import ProfileInfoContainer from './ProfileInfoContainer';
-import DescriptionBoxContainer from './DescriptionBoxContainer';
-import ProfileImageContainer from './ProfileImageContainer';
+import ProfileInfoContainer from '../containers/ProfileInfoContainer';
+import DescriptionBoxContainer from '../containers/DescriptionBoxContainer';
+import ProfileImageContainer from '../containers/ProfileImageContainer';
 
 class UserCard extends Component {
   render () {

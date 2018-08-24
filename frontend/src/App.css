@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   display: flex;
@@ -15,7 +10,6 @@
   height: 150px;
   padding: 20px;
   color: white;
-  width: 100%;
 }
 
 .App-title {
@@ -31,11 +25,18 @@
   align-content: flex-end;
   display: flex;
   flex-direction: row;
-  padding: 100px 50px 0 100px;
+  margin-right: 20px;
+  margin-top: 100px;
 }
 
-.menu-item {
-  margin: 20px;
+.menu-item a{
+  border: solid;
+  border-color: white;
+  border-radius: 3px;
+  color: white;
+  font-size: 18px;
+  padding: 3px;
+  text-decoration: none;
 }
 
 .user-card {
@@ -43,8 +44,9 @@
   border-radius: 10px;
   border-style: solid;
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
-  height: 400px;
+  min-height: 400px;
   justify-content: space-around;
   align-items: center;
   margin: 20px;
@@ -72,7 +74,7 @@
 }
 
 .profile-picture {
-  height: 200px;
+  width: 300px;
 }
 
 .new-user-card input[type=text] {
