@@ -2,13 +2,11 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 150px;
   padding: 20px;
   color: white;
@@ -20,9 +18,82 @@
 
 .App-intro {
   font-size: large;
+  margin-top: 100px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.top-menu {
+  align-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+  margin-top: 100px;
+}
+
+.menu-item a{
+  border: solid;
+  border-color: white;
+  border-radius: 3px;
+  color: white;
+  font-size: 18px;
+  padding: 3px;
+  text-decoration: none;
+}
+
+.user-card {
+  border-color: grey;
+  border-radius: 10px;
+  border-style: solid;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  min-height: 400px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.user-card input[type=text] {
+  border: none;
+  height: 20px;
+  margin: 5px;
+  width: 200px;
+}
+
+.user-card input:hover {
+  border-style: inset;
+}
+
+::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.user-card ::placeholder {
+  font-size: 18px;
+}
+
+.profile-picture {
+  width: 300px;
+}
+
+.new-user-card input[type=text] {
+  margin: 5px;
+}
+
+.new-user-card {
+  border-color: grey;
+  border-radius: 10px;
+  border-style: solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
 }
