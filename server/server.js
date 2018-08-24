@@ -7,9 +7,9 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const User = require('./userModel');
 
-const API_PORT = process.env.API_PORT || 8080;
+const API_PORT = process.env.PORT || 8080;
 
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
